@@ -66,7 +66,7 @@ spec:
         app: centos-attacker
     spec:
       containers:
-      - image: centos:8
+      - image: centos:7
         name: centos-attacker
         command: ["/bin/sleep", "3650d"]
         resources: {}
