@@ -71,17 +71,3 @@ spec:
         command: ["/bin/sleep", "3650d"]
         resources: {}
 status: {}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: centos-attacker-ssh
-  namespace: evil
-spec:
-  type: NodePort
-  ports:
-  - targetPort: 22
-    port: 22
-    nodePort: 30022
-  selector:
-    app: centos-attacker
